@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav mx-auto gap-3">
                     <li class="nav-item">
-                        <a href="." class="nav-link active">
+                        <a wire:navigate href="." class="nav-link active">
                             <i class="bx bxs-dashboard"></i> Dashboard
                         </a>
                     </li>
@@ -42,12 +42,12 @@
 
                         <ul class="dropdown-menu mt-2">
                             <li>
-                                <a href="{{route('gedung.index')}}" class="dropdown-item">
+                                <a wire:navigate href="{{route('gedung.index')}}" class="dropdown-item">
                                     <i class="bx bx-objects-horizontal-right"></i> Data Gedung
                                 </a>
                             </li>
                             <li>
-                                <a href="{{route('ruangan.index')}}" class="dropdown-item">
+                                <a wire:navigate href="{{route('ruangan.index')}}" class="dropdown-item">
                                     <i class="bx bx-box"></i> Data Ruangan
                                 </a>
                             </li>
@@ -55,23 +55,23 @@
 
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <a  href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="bx bx-box"></i> Inventarisasi
                         </a>
 
                         <ul class="dropdown-menu mt-2">
                             <li>
-                                <a href="kategori.html" class="dropdown-item">
+                                <a wire:navigate href="{{route('kategori.index')}}" class="dropdown-item">
                                     <i class="bx bx-objects-horizontal-right"></i> Data Kategori Barang
                                 </a>
                             </li>
                             <li>
-                                <a href="produk.html" class="dropdown-item">
+                                <a wire:navigate href="produk.html" class="dropdown-item">
                                     <i class="bx bx-box"></i> Data Barang
                                 </a>
                             </li>
                             <li>
-                                <a href="produk.html" class="dropdown-item">
+                                <a wire:navigate href="produk.html" class="dropdown-item">
                                     <i class="bx bx-box"></i> Penempatan Barang
                                 </a>
                             </li>

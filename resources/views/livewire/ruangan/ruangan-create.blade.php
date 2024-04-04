@@ -29,6 +29,9 @@
                             <button class="btn btn-sm btn-primary" type="submit">
                                 <i class="bx bx-save"></i> Simpan
                             </button>
+                            <div wire:loading> 
+                                Saving...
+                            </div>
                         </div>
                     </div>
                 </form>

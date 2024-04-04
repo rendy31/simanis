@@ -8,8 +8,11 @@ use App\Livewire\Gedung\GedungCreate;
 use App\Livewire\Ruangan\RuanganEdit;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Ruangan\RuanganIndex;
+use App\Livewire\Kategori\KategoriEdit;
 use App\Livewire\Ruangan\RuanganCreate;
 use App\Http\Controllers\HomeController;
+use App\Livewire\Kategori\KategoriIndex;
+use App\Livewire\Kategori\KategoriCreate;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +41,7 @@ Route::get('/gedung/edit/{id}', GedungEdit::class)->middleware('auth')->name('ge
 Route::get('/ruangan', RuanganIndex::class)->middleware('auth')->name('ruangan.index');
 Route::get('/ruangan/create', RuanganCreate::class)->middleware('auth')->name('ruangan.create');
 Route::get('/ruangan/edit/{id}', RuanganEdit::class)->middleware('auth')->name('ruangan.edit');
+
+Route::get('/kategori', KategoriIndex::class)->middleware('auth')->name('kategori.index');
+Route::get('/kategori/create', KategoriCreate::class)->middleware('auth')->name('kategori.create');
+Route::get('/kategori/edit/{id}', KategoriEdit::class)->middleware('auth')->name('kategori.edit');
