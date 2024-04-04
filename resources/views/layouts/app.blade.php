@@ -66,7 +66,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a wire:navigate href="produk.html" class="dropdown-item">
+                                <a wire:navigate href="{{route('barang.index')}}" class="dropdown-item">
                                     <i class="bx bx-box"></i> Data Barang
                                 </a>
                             </li>
