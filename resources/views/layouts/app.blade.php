@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://stikessuakainsan.ac.id/wp-content/uploads/2022/11/KAMPUS-SUAKA-INSAN.png" type="image/x-icon">
     <title>SIManis</title>
-
+    
     <link rel="stylesheet" href="{{url('assets/vendors/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('assets/vendors/boxicons/css/boxicons.min.css')}}">
     <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
+    
 </head>
 
 <body class="bg-soft-blue">

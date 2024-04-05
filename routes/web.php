@@ -14,6 +14,7 @@ use App\Livewire\Ruangan\RuanganIndex;
 use App\Livewire\Kategori\KategoriEdit;
 use App\Livewire\Ruangan\RuanganCreate;
 use App\Http\Controllers\HomeController;
+use App\Livewire\Barang\BarangShow;
 use App\Livewire\Kategori\KategoriIndex;
 use App\Livewire\Kategori\KategoriCreate;
 
@@ -52,3 +53,4 @@ Route::get('/kategori/edit/{id}', KategoriEdit::class)->middleware('auth')->name
 Route::get('/barang', BarangIndex::class)->middleware('auth')->name('barang.index');
 Route::get('/barang/create', BarangCreate::class)->middleware('auth')->name('barang.create');
 Route::get('/barang/edit/{id}', BarangEdit::class)->middleware('auth')->name('barang.edit');
+Route::get('/barang/show/{id}', BarangShow::class)->middleware('auth')->name('barang.show');

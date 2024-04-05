@@ -3,6 +3,7 @@
 namespace App\Livewire\Barang;
 
 use App\Models\barang;
+use App\Models\Kategori;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
@@ -66,7 +67,7 @@ class BarangEdit extends Component
             'totalHarga' => $totalHarga,
             'tempatBeli' => $this->tempatBeli,
             'asalBarang' => $this->asalBarang,
-            'asalBarang' => $this->asalBarang,
+            'kepemilikan' => $this->kepemilikan,
         ]);
         session()->flash('sukses', 'Data TerUpdate');
         return $this->redirectRoute('barang.index', navigate:true);
@@ -74,6 +75,7 @@ class BarangEdit extends Component
 
     public function render()
     {
-        return view('livewire.barang.barang-edit');
+        $kategoris = Kategori::all();
+        return view('livewire.barang.barang-edit',compact('kategoris'));
     }
 }

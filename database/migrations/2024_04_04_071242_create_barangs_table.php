@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('totalHarga');
             $table->string('tempatBeli');
             $table->string('asalBarang');
-            $table->string('kapemilikan');
+            $table->string('kepemilikan');
             $table->timestamps();
         });
     }
