@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class gedung extends Model
 {
@@ -14,4 +15,11 @@ class gedung extends Model
         'id',
         'namaGedung',
     ];
+
+    
+
+    public function ruangans(): HasMany
+    {
+        return $this->hasMany(ruangan::class);
+    }
 }

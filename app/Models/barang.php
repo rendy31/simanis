@@ -24,8 +24,17 @@ class barang extends Model
         'kepemilikan',
     ];
 
+    public function penempatan()
+    {
+        return $this->hasMany('App\Models\Penempatan', 'barang_id');
+    }
+
     public function kategori(): BelongsTo
     {
         return $this->belongsTo(Kategori::class);
+    }
+
+    public function scopeSearch($query, $value){
+        $query->where('namaBarang','like', "%{$value}%");
     }
 }

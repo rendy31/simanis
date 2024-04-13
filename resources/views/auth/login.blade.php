@@ -21,10 +21,10 @@
                 <div class="card border-0">
                     <div class="card-body">
                         <a href="." class="navbar-brand d-flex align-items-center gap-2 fw-bold mb-5">
-                            <img src="{{url('assets/images/logo.png')}}" alt="">
+                            <img src="https://stikessuakainsan.ac.id/wp-content/uploads/2022/11/KAMPUS-SUAKA-INSAN.png" alt="logo stikes suaka insan" style="width: 15%">
                             <div>
                                 <p class="mb-0 fs-7" style="line-height: 15px;">
-                                    Ware <br> <span class="text-primary">House</span>
+                                    STIKES Suaka Insan <br> <span class="text-primary">Sistem Informasi Manajemen Inventaris</span>
                                 </p>
                             </div>
                         </a>

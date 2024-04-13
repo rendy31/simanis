@@ -2,6 +2,7 @@
 
 use App\Livewire\Home;
 use App\Livewire\Barang\BarangEdit;
+use App\Livewire\Barang\BarangShow;
 use App\Livewire\Gedung\GedungEdit;
 use App\Livewire\Barang\BarangIndex;
 use App\Livewire\Gedung\GedungIndex;
@@ -14,9 +15,12 @@ use App\Livewire\Ruangan\RuanganIndex;
 use App\Livewire\Kategori\KategoriEdit;
 use App\Livewire\Ruangan\RuanganCreate;
 use App\Http\Controllers\HomeController;
-use App\Livewire\Barang\BarangShow;
 use App\Livewire\Kategori\KategoriIndex;
 use App\Livewire\Kategori\KategoriCreate;
+use App\Livewire\Penempatan\PenempatanEdit;
+use App\Livewire\Penempatan\PenempatanShow;
+use App\Livewire\Penempatan\PenempatanIndex;
+use App\Livewire\Penempatan\PenempatanCreate;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +37,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['register'=>false]);
+Route::prefix('manis')->group(function () {
+    // Auth::routes();
+    Auth::routes(['register'=>false]);
+});
 
 
 Route::get('/home', Home::class)->middleware('auth')->name('home');
@@ -54,3 +61,9 @@ Route::get('/barang', BarangIndex::class)->middleware('auth')->name('barang.inde
 Route::get('/barang/create', BarangCreate::class)->middleware('auth')->name('barang.create');
 Route::get('/barang/edit/{id}', BarangEdit::class)->middleware('auth')->name('barang.edit');
 Route::get('/barang/show/{id}', BarangShow::class)->middleware('auth')->name('barang.show');
+
+
+Route::get('/penempatan', PenempatanIndex::class)->middleware('auth')->name('penempatan.index');
+Route::get('/penempatan/create', PenempatanCreate::class)->middleware('auth')->name('penempatan.create');
+Route::get('/penempatan/edit/{id}', PenempatanEdit::class)->middleware('auth')->name('penempatan.edit');
+Route::get('/penempatan/show/{id}', PenempatanShow::class)->middleware('auth')->name('penempatan.show');
